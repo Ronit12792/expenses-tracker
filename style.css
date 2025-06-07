@@ -1,0 +1,132 @@
+:root {
+  --primary: #4a6fa5;
+  --income: #2ecc71;
+  --expense: #e74c3c;
+  --light: #f5f5f5;
+  --dark: #333;
+  --background: #fff;
+  --text: #333;
+}
+
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#theme-toggle {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.balance-box, .income-box, .expense-box {
+  background: var(--background);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.income-box { border-top: 4px solid var(--income); }
+.expense-box { border-top: 4px solid var(--expense); }
+
+.transaction-form {
+  background: var(--background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.transaction-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-form input, 
+.transaction-form select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.transaction-form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#transaction-list {
+  list-style: none;
+}
+
+#transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: var(--background);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#transaction-list li.income { border-left: 4px solid var(--income); }
+#transaction-list li.expense { border-left: 4px solid var(--expense); }
+
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.charts {
+  margin-top: 30px;
+  background: var(--background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
