@@ -1,4 +1,4 @@
-# Expenses Tracker - README
+
 
 ## Overview
 This Expenses Tracker is a web application built with HTML, CSS, and JavaScript that helps users monitor their spending habits. The application allows users to add, view, and manage their expenses with an intuitive interface.
